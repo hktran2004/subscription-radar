@@ -1,0 +1,569 @@
+[
+  {
+    "id": "t013",
+    "date": "2026-04-01",
+    "merchant": "PLANET FITNESS",
+    "amount": 10.0,
+    "category": "Subscription"
+  },
+  {
+    "id": "t031",
+    "date": "2026-04-02",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
+    "category": "Subscription"
+  },
+  {
+    "id": "t025",
+    "date": "2026-04-03",
+    "merchant": "APPLE.COM/ICLOUD",
+    "amount": 2.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t040",
+    "date": "2026-04-03",
+    "merchant": "TRADER JOE'S",
+    "amount": 42.18,
+    "category": "Groceries"
+  },
+  {
+    "id": "t001",
+    "date": "2026-04-05",
+    "merchant": "NETFLIX.COM",
+    "amount": 15.49,
+    "category": "Subscription"
+  },
+  {
+    "id": "t041",
+    "date": "2026-04-05",
+    "merchant": "SHELL OIL",
+    "amount": 38.5,
+    "category": "Transport"
+  },
+  {
+    "id": "t042",
+    "date": "2026-04-06",
+    "merchant": "CHIPOTLE",
+    "amount": 13.75,
+    "category": "Dining"
+  },
+  {
+    "id": "t021",
+    "date": "2026-04-08",
+    "merchant": "NYTIMES SUBSCRIPTION",
+    "amount": 4.25,
+    "category": "Subscription"
+  },
+  {
+    "id": "t043",
+    "date": "2026-04-09",
+    "merchant": "TARGET",
+    "amount": 67.32,
+    "category": "Shopping"
+  },
+  {
+    "id": "t005",
+    "date": "2026-04-10",
+    "merchant": "SPOTIFY USA",
+    "amount": 11.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t044",
+    "date": "2026-04-11",
+    "merchant": "UBER TRIP",
+    "amount": 22.4,
+    "category": "Transport"
+  },
+  {
+    "id": "t029",
+    "date": "2026-04-12",
+    "merchant": "AUDIBLE*US",
+    "amount": 44.85,
+    "category": "Subscription"
+  },
+  {
+    "id": "t045",
+    "date": "2026-04-14",
+    "merchant": "STARBUCKS",
+    "amount": 6.85,
+    "category": "Dining"
+  },
+  {
+    "id": "t009",
+    "date": "2026-04-15",
+    "merchant": "AMAZON PRIME",
+    "amount": 14.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t032",
+    "date": "2026-04-16",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
+    "category": "Subscription"
+  },
+  {
+    "id": "t046",
+    "date": "2026-04-17",
+    "merchant": "WHOLE FOODS",
+    "amount": 58.9,
+    "category": "Groceries"
+  },
+  {
+    "id": "t047",
+    "date": "2026-04-19",
+    "merchant": "CVS PHARMACY",
+    "amount": 15.2,
+    "category": "Shopping"
+  },
+  {
+    "id": "t017",
+    "date": "2026-04-20",
+    "merchant": "ADOBE CREATIVE CLOUD",
+    "amount": 54.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t048",
+    "date": "2026-04-22",
+    "merchant": "CHEVRON",
+    "amount": 41.1,
+    "category": "Transport"
+  },
+  {
+    "id": "t049",
+    "date": "2026-04-25",
+    "merchant": "IN-N-OUT",
+    "amount": 11.45,
+    "category": "Dining"
+  },
+  {
+    "id": "t050",
+    "date": "2026-04-28",
+    "merchant": "AMAZON.COM",
+    "amount": 89.99,
+    "category": "Shopping"
+  },
+  {
+    "id": "t033",
+    "date": "2026-04-30",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
+    "category": "Subscription"
+  },
+  {
+    "id": "t014",
+    "date": "2026-05-01",
+    "merchant": "PLANET FITNESS",
+    "amount": 10.0,
+    "category": "Subscription"
+  },
+  {
+    "id": "t051",
+    "date": "2026-05-02",
+    "merchant": "TRADER JOE'S",
+    "amount": 39.6,
+    "category": "Groceries"
+  },
+  {
+    "id": "t026",
+    "date": "2026-05-03",
+    "merchant": "APPLE.COM/ICLOUD",
+    "amount": 2.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t052",
+    "date": "2026-05-04",
+    "merchant": "UBER EATS",
+    "amount": 28.3,
+    "category": "Dining"
+  },
+  {
+    "id": "t002",
+    "date": "2026-05-05",
+    "merchant": "NETFLIX.COM",
+    "amount": 15.49,
+    "category": "Subscription"
+  },
+  {
+    "id": "t053",
+    "date": "2026-05-07",
+    "merchant": "SHELL OIL",
+    "amount": 35.75,
+    "category": "Transport"
+  },
+  {
+    "id": "t022",
+    "date": "2026-05-08",
+    "merchant": "NYTIMES SUBSCRIPTION",
+    "amount": 4.25,
+    "category": "Subscription"
+  },
+  {
+    "id": "t054",
+    "date": "2026-05-09",
+    "merchant": "REI",
+    "amount": 112.4,
+    "category": "Shopping"
+  },
+  {
+    "id": "t006",
+    "date": "2026-05-10",
+    "merchant": "SPOTIFY USA",
+    "amount": 11.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t055",
+    "date": "2026-05-12",
+    "merchant": "STARBUCKS",
+    "amount": 5.95,
+    "category": "Dining"
+  },
+  {
+    "id": "t034",
+    "date": "2026-05-14",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
+    "category": "Subscription"
+  },
+  {
+    "id": "t010",
+    "date": "2026-05-15",
+    "merchant": "AMAZON PRIME",
+    "amount": 14.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t056",
+    "date": "2026-05-16",
+    "merchant": "WHOLE FOODS",
+    "amount": 63.2,
+    "category": "Groceries"
+  },
+  {
+    "id": "t057",
+    "date": "2026-05-18",
+    "merchant": "CHIPOTLE",
+    "amount": 14.1,
+    "category": "Dining"
+  },
+  {
+    "id": "t018",
+    "date": "2026-05-20",
+    "merchant": "ADOBE CREATIVE CLOUD",
+    "amount": 54.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t058",
+    "date": "2026-05-21",
+    "merchant": "TARGET",
+    "amount": 45.6,
+    "category": "Shopping"
+  },
+  {
+    "id": "t059",
+    "date": "2026-05-24",
+    "merchant": "CHEVRON",
+    "amount": 39.85,
+    "category": "Transport"
+  },
+  {
+    "id": "t060",
+    "date": "2026-05-27",
+    "merchant": "AMC THEATRES",
+    "amount": 32.0,
+    "category": "Entertainment"
+  },
+  {
+    "id": "t035",
+    "date": "2026-05-28",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
+    "category": "Subscription"
+  },
+  {
+    "id": "t061",
+    "date": "2026-05-30",
+    "merchant": "TRADER JOE'S",
+    "amount": 47.85,
+    "category": "Groceries"
+  },
+  {
+    "id": "t015",
+    "date": "2026-06-01",
+    "merchant": "PLANET FITNESS",
+    "amount": 10.0,
+    "category": "Subscription"
+  },
+  {
+    "id": "t062",
+    "date": "2026-06-02",
+    "merchant": "UBER TRIP",
+    "amount": 19.2,
+    "category": "Transport"
+  },
+  {
+    "id": "t027",
+    "date": "2026-06-03",
+    "merchant": "APPLE.COM/ICLOUD",
+    "amount": 2.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t003",
+    "date": "2026-06-05",
+    "merchant": "NETFLIX.COM",
+    "amount": 15.49,
+    "category": "Subscription"
+  },
+  {
+    "id": "t063",
+    "date": "2026-06-05",
+    "merchant": "CVS PHARMACY",
+    "amount": 22.1,
+    "category": "Shopping"
+  },
+  {
+    "id": "t023",
+    "date": "2026-06-08",
+    "merchant": "NYTIMES SUBSCRIPTION",
+    "amount": 4.25,
+    "category": "Subscription"
+  },
+  {
+    "id": "t064",
+    "date": "2026-06-08",
+    "merchant": "IN-N-OUT",
+    "amount": 12.3,
+    "category": "Dining"
+  },
+  {
+    "id": "t007",
+    "date": "2026-06-10",
+    "merchant": "SPOTIFY USA",
+    "amount": 12.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t065",
+    "date": "2026-06-10",
+    "merchant": "SHELL OIL",
+    "amount": 40.15,
+    "category": "Transport"
+  },
+  {
+    "id": "t036",
+    "date": "2026-06-11",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
+    "category": "Subscription"
+  },
+  {
+    "id": "t066",
+    "date": "2026-06-13",
+    "merchant": "WHOLE FOODS",
+    "amount": 71.05,
+    "category": "Groceries"
+  },
+  {
+    "id": "t011",
+    "date": "2026-06-15",
+    "merchant": "AMAZON PRIME",
+    "amount": 14.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t067",
+    "date": "2026-06-17",
+    "merchant": "STARBUCKS",
+    "amount": 7.4,
+    "category": "Dining"
+  },
+  {
+    "id": "t019",
+    "date": "2026-06-20",
+    "merchant": "ADOBE CREATIVE CLOUD",
+    "amount": 54.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t068",
+    "date": "2026-06-20",
+    "merchant": "AMAZON.COM",
+    "amount": 54.2,
+    "category": "Shopping"
+  },
+  {
+    "id": "t069",
+    "date": "2026-06-23",
+    "merchant": "CHIPOTLE",
+    "amount": 15.6,
+    "category": "Dining"
+  },
+  {
+    "id": "t037",
+    "date": "2026-06-25",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
+    "category": "Subscription"
+  },
+  {
+    "id": "t070",
+    "date": "2026-06-26",
+    "merchant": "CHEVRON",
+    "amount": 37.9,
+    "category": "Transport"
+  },
+  {
+    "id": "t071",
+    "date": "2026-06-29",
+    "merchant": "TRADER JOE'S",
+    "amount": 44.75,
+    "category": "Groceries"
+  },
+  {
+    "id": "t016",
+    "date": "2026-07-01",
+    "merchant": "PLANET FITNESS",
+    "amount": 10.0,
+    "category": "Subscription"
+  },
+  {
+    "id": "t072",
+    "date": "2026-07-02",
+    "merchant": "UBER EATS",
+    "amount": 31.2,
+    "category": "Dining"
+  },
+  {
+    "id": "t028",
+    "date": "2026-07-03",
+    "merchant": "APPLE.COM/ICLOUD",
+    "amount": 2.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t004",
+    "date": "2026-07-05",
+    "merchant": "NETFLIX.COM",
+    "amount": 15.49,
+    "category": "Subscription"
+  },
+  {
+    "id": "t073",
+    "date": "2026-07-05",
+    "merchant": "TARGET",
+    "amount": 78.4,
+    "category": "Shopping"
+  },
+  {
+    "id": "t024",
+    "date": "2026-07-08",
+    "merchant": "NYTIMES SUBSCRIPTION",
+    "amount": 4.25,
+    "category": "Subscription"
+  },
+  {
+    "id": "t074",
+    "date": "2026-07-08",
+    "merchant": "SHELL OIL",
+    "amount": 42.6,
+    "category": "Transport"
+  },
+  {
+    "id": "t038",
+    "date": "2026-07-09",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
+    "category": "Subscription"
+  },
+  {
+    "id": "t008",
+    "date": "2026-07-10",
+    "merchant": "SPOTIFY USA",
+    "amount": 12.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t075",
+    "date": "2026-07-11",
+    "merchant": "WHOLE FOODS",
+    "amount": 65.3,
+    "category": "Groceries"
+  },
+  {
+    "id": "t030",
+    "date": "2026-07-12",
+    "merchant": "AUDIBLE*US",
+    "amount": 44.85,
+    "category": "Subscription"
+  },
+  {
+    "id": "t076",
+    "date": "2026-07-14",
+    "merchant": "STARBUCKS",
+    "amount": 6.2,
+    "category": "Dining"
+  },
+  {
+    "id": "t012",
+    "date": "2026-07-15",
+    "merchant": "AMAZON PRIME",
+    "amount": 14.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t077",
+    "date": "2026-07-17",
+    "merchant": "AMC THEATRES",
+    "amount": 28.5,
+    "category": "Entertainment"
+  },
+  {
+    "id": "t020",
+    "date": "2026-07-20",
+    "merchant": "ADOBE CREATIVE CLOUD",
+    "amount": 54.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t078",
+    "date": "2026-07-20",
+    "merchant": "CVS PHARMACY",
+    "amount": 18.9,
+    "category": "Shopping"
+  },
+  {
+    "id": "t039",
+    "date": "2026-07-23",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
+    "category": "Subscription"
+  },
+  {
+    "id": "t079",
+    "date": "2026-07-23",
+    "merchant": "CHIPOTLE",
+    "amount": 13.25,
+    "category": "Dining"
+  },
+  {
+    "id": "t080",
+    "date": "2026-07-26",
+    "merchant": "CHEVRON",
+    "amount": 38.7,
+    "category": "Transport"
+  },
+  {
+    "id": "t081",
+    "date": "2026-07-29",
+    "merchant": "TRADER JOE'S",
+    "amount": 51.4,
+    "category": "Groceries"
+  }
+]
