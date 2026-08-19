@@ -1,22 +1,30 @@
 import Link from "next/link";
-import rawTransactions from "@/data/mock_transactions.json";
+import { notFound } from "next/navigation";
 import { detectSubscriptions, totalMonthlySpend } from "@/lib/detectSubscriptions";
 import { formatCurrency, formatDate } from "@/lib/format";
-import { groupTransactionsByDate } from "@/lib/transactions";
-import { Transaction } from "@/lib/types";
+import { getAccountTransactions, groupTransactionsByDate } from "@/lib/transactions";
+import { getAccount } from "@/lib/accounts";
 import { ChevronIcon, RecurringIcon } from "@/components/icons";
 import { CardArt } from "@/components/CardArt";
 import { CategoryIcon } from "@/components/CategoryIcon";
-import { SAPPHIRE_ACCOUNT } from "@/lib/accounts";
 
 const QUICK_ACTIONS = ["Manage account", "Lock/unlock card", "Pay card", "Statements"];
 
-export default function AccountPage() {
-  const transactions = rawTransactions as Transaction[];
-  const subscriptions = detectSubscriptions(transactions);
+export default async function AccountPage({
+  params,
+}: {
+  params: Promise<{ accountId: string }>;
+}) {
+  const { accountId } = await params;
+  const account = getAccount(accountId);
+  if (!account) notFound();
+
+  const transactions = getAccountTransactions(account.id);
+  const groups = groupTransactionsByDate(transactions);
+
+  const subscriptions = account.hasSubscriptionRadar ? detectSubscriptions(transactions) : [];
   const total = totalMonthlySpend(subscriptions);
   const increasedCount = subscriptions.filter((s) => s.priceIncreased).length;
-  const groups = groupTransactionsByDate(transactions);
 
   return (
     <main className="mx-auto flex min-h-screen max-w-md flex-col gap-5 px-4 py-6">
@@ -29,11 +37,11 @@ export default function AccountPage() {
           <ChevronIcon className="h-5 w-5 rotate-180" />
         </Link>
         <h1 className="text-lg font-bold text-ink">
-          {SAPPHIRE_ACCOUNT.name} (••••{SAPPHIRE_ACCOUNT.last4})
+          {account.name} (••••{account.last4})
         </h1>
       </header>
 
-      <CardArt size="lg" />
+      <CardArt size="lg" variant={account.cardVariant} />
 
       <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1">
         {QUICK_ACTIONS.map((label) => (
@@ -49,29 +57,29 @@ export default function AccountPage() {
       <section className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5">
         <p className="text-sm text-chase-gray">Current balance</p>
         <p className="mt-1 text-4xl font-bold tabular-nums text-ink">
-          {formatCurrency(SAPPHIRE_ACCOUNT.currentBalance)}
+          {formatCurrency(account.currentBalance)}
         </p>
 
         <div className="mt-4 flex flex-col gap-3 border-t border-slate-100 pt-4">
           <div className="flex items-center justify-between text-sm">
             <span className="text-chase-gray">Minimum payment due</span>
             <span className="font-semibold tabular-nums text-ink">
-              {formatCurrency(SAPPHIRE_ACCOUNT.minimumPaymentDue)}
+              {formatCurrency(account.minimumPaymentDue)}
             </span>
           </div>
           <div className="flex items-center justify-between text-sm">
             <span className="text-chase-gray">Payment due date</span>
-            <span className="font-semibold text-ink">{SAPPHIRE_ACCOUNT.paymentDueDate}</span>
+            <span className="font-semibold text-ink">{account.paymentDueDate}</span>
           </div>
           <div className="flex items-center justify-between text-sm">
             <span className="text-chase-gray">Remaining statement balance</span>
             <span className="font-semibold tabular-nums text-ink">
-              {formatCurrency(SAPPHIRE_ACCOUNT.remainingStatementBalance)}
+              {formatCurrency(account.remainingStatementBalance)}
             </span>
           </div>
           <div className="flex items-center justify-between text-sm">
             <span className="text-chase-gray">Automatic payments</span>
-            <span className="font-semibold text-ink">{SAPPHIRE_ACCOUNT.autoPay}</span>
+            <span className="font-semibold text-ink">{account.autoPay}</span>
           </div>
         </div>
 
@@ -85,22 +93,24 @@ export default function AccountPage() {
         </div>
       </section>
 
-      <Link
-        href="/subscriptions"
-        className="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 active:bg-slate-50"
-      >
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-chase-chip text-chase-blue">
-          <RecurringIcon className="h-5 w-5" />
-        </span>
-        <span className="min-w-0 flex-1">
-          <span className="block text-sm font-bold text-ink">Subscription Radar</span>
-          <span className="block text-xs text-chase-gray">
-            {subscriptions.length} recurring · {formatCurrency(total)}/mo
-            {increasedCount > 0 ? ` · ${increasedCount} price increase${increasedCount > 1 ? "s" : ""}` : ""}
+      {account.hasSubscriptionRadar && (
+        <Link
+          href="/subscriptions"
+          className="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 active:bg-slate-50"
+        >
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-chase-chip text-chase-blue">
+            <RecurringIcon className="h-5 w-5" />
           </span>
-        </span>
-        <ChevronIcon className="h-5 w-5 shrink-0 text-slate-400" />
-      </Link>
+          <span className="min-w-0 flex-1">
+            <span className="block text-sm font-bold text-ink">Subscription Radar</span>
+            <span className="block text-xs text-chase-gray">
+              {subscriptions.length} recurring · {formatCurrency(total)}/mo
+              {increasedCount > 0 ? ` · ${increasedCount} price increase${increasedCount > 1 ? "s" : ""}` : ""}
+            </span>
+          </span>
+          <ChevronIcon className="h-5 w-5 shrink-0 text-slate-400" />
+        </Link>
+      )}
 
       <section className="flex flex-col gap-1">
         <div className="flex items-center justify-between px-1">
@@ -118,7 +128,7 @@ export default function AccountPage() {
                 {group.transactions.map((txn) => (
                   <li key={txn.id} className="border-b border-slate-100 last:border-0">
                     <Link
-                      href={`/account/transactions/${txn.id}`}
+                      href={`/account/${account.id}/transactions/${txn.id}`}
                       className="flex items-center gap-3 px-4 py-3 active:bg-slate-50"
                     >
                       <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-500">

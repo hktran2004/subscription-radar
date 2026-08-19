@@ -2,7 +2,10 @@ import Link from "next/link";
 import { formatCurrency } from "@/lib/format";
 import { ChevronIcon, ProfileIcon, SearchIcon } from "@/components/icons";
 import { CardArt } from "@/components/CardArt";
-import { FREEDOM_FLEX_ACCOUNT, SAPPHIRE_ACCOUNT } from "@/lib/accounts";
+import { ACCOUNTS } from "@/lib/accounts";
+
+const SAPPHIRE_ACCOUNT = ACCOUNTS["sapphire-preferred"];
+const FREEDOM_FLEX_ACCOUNT = ACCOUNTS["freedom-flex"];
 
 export default function Home() {
   return (
@@ -25,7 +28,10 @@ export default function Home() {
             <p className="text-base font-bold text-white">Credit cards (2)</p>
           </div>
 
-          <Link href="/account" className="block border-b border-slate-100 px-4 py-4 active:bg-slate-50">
+          <Link
+            href={`/account/${SAPPHIRE_ACCOUNT.id}`}
+            className="block border-b border-slate-100 px-4 py-4 active:bg-slate-50"
+          >
             <span className="mb-3 flex items-center gap-1 text-base text-ink">
               {SAPPHIRE_ACCOUNT.name} (••••{SAPPHIRE_ACCOUNT.last4})
               <ChevronIcon className="h-4 w-4 text-slate-400" />
@@ -42,9 +48,10 @@ export default function Home() {
             </span>
           </Link>
 
-          <div className="px-4 py-4">
+          <Link href={`/account/${FREEDOM_FLEX_ACCOUNT.id}`} className="block px-4 py-4 active:bg-slate-50">
             <span className="mb-3 flex items-center gap-1 text-base text-ink">
               {FREEDOM_FLEX_ACCOUNT.name} (••••{FREEDOM_FLEX_ACCOUNT.last4})
+              <ChevronIcon className="h-4 w-4 text-slate-400" />
             </span>
 
             <span className="flex items-center gap-4">
@@ -56,7 +63,7 @@ export default function Home() {
                 <span className="block text-sm text-chase-gray">Current balance</span>
               </span>
             </span>
-          </div>
+          </Link>
         </div>
       </section>
     </main>

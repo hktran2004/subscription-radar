@@ -174,3 +174,28 @@ export function TicketIcon({ className }: { className?: string }) {
     </svg>
   );
 }
+
+export function ChairIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <path
+        d="M6 3l-1.5 9M18 3l1.5 9M4.5 12h15l-1.2 7a1.5 1.5 0 01-1.5 1.3H7.2a1.5 1.5 0 01-1.5-1.3l-1.2-7z"
+        stroke="currentColor"
+        strokeWidth={1.5}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path d="M7 15.5h10" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function ChartFrameIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <rect x="3" y="4" width="18" height="14" rx="1.5" stroke="currentColor" strokeWidth={1.5} />
+      <path d="M6.5 14.5l3-3.5 2.5 2 4.5-6" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M8 21h8M12 18v3" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" />
+    </svg>
+  );
+}

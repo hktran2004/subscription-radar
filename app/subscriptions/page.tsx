@@ -1,10 +1,10 @@
-import Link from "next/link";
 import rawTransactions from "@/data/mock_transactions.json";
 import { detectSubscriptions, totalMonthlySpend } from "@/lib/detectSubscriptions";
 import { formatCurrency } from "@/lib/format";
 import { SubscriptionList } from "@/components/SubscriptionList";
 import { Transaction } from "@/lib/types";
-import { AlertIcon, CheckIcon, ChevronIcon } from "@/components/icons";
+import { AlertIcon, CheckIcon } from "@/components/icons";
+import { BackButton } from "@/components/BackButton";
 
 export default function SubscriptionsHubPage() {
   const transactions = rawTransactions as Transaction[];
@@ -15,13 +15,7 @@ export default function SubscriptionsHubPage() {
   return (
     <main className="mx-auto flex min-h-screen max-w-md flex-col gap-5 px-4 py-6">
       <header className="flex items-center gap-1">
-        <Link
-          href="/account"
-          aria-label="Back to transactions"
-          className="-ml-1 flex h-8 w-8 items-center justify-center rounded-full text-slate-500 active:bg-slate-100"
-        >
-          <ChevronIcon className="h-5 w-5 rotate-180" />
-        </Link>
+        <BackButton label="Go back" />
         <div>
           <h1 className="text-lg font-bold text-ink">Subscription Radar</h1>
           <p className="text-sm text-chase-gray">Recurring charges on Sapphire Preferred</p>

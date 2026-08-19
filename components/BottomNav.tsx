@@ -12,7 +12,7 @@ const INERT_TABS = [
 export function BottomNav() {
   const pathname = usePathname();
   const isAccounts = pathname === "/" || pathname.startsWith("/account");
-  const isPlanTrack = pathname.startsWith("/subscriptions");
+  const isPlanTrack = pathname.startsWith("/plan") || pathname.startsWith("/subscriptions");
 
   return (
     <nav className="fixed inset-x-0 bottom-0 border-t border-slate-200 bg-white">
@@ -26,7 +26,7 @@ export function BottomNav() {
         </Link>
 
         <Link
-          href="/subscriptions"
+          href="/plan"
           className={`flex flex-col items-center gap-1 px-2 ${isPlanTrack ? "text-chase-blue-solid" : "text-slate-500"}`}
         >
           <PlanIcon className="h-6 w-6" />

@@ -63,6 +63,13 @@
     "category": "Shopping"
   },
   {
+    "id": "t082",
+    "date": "2026-04-09",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
+    "category": "Subscription"
+  },
+  {
     "id": "t005",
     "date": "2026-04-10",
     "merchant": "SPOTIFY USA",
@@ -133,6 +140,13 @@
     "category": "Transport"
   },
   {
+    "id": "t083",
+    "date": "2026-04-23",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
+    "category": "Subscription"
+  },
+  {
     "id": "t049",
     "date": "2026-04-25",
     "merchant": "IN-N-OUT",
@@ -194,6 +208,13 @@
     "merchant": "SHELL OIL",
     "amount": 35.75,
     "category": "Transport"
+  },
+  {
+    "id": "t084",
+    "date": "2026-05-07",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
+    "category": "Subscription"
   },
   {
     "id": "t022",
@@ -266,6 +287,13 @@
     "category": "Shopping"
   },
   {
+    "id": "t085",
+    "date": "2026-05-21",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
+    "category": "Subscription"
+  },
+  {
     "id": "t059",
     "date": "2026-05-24",
     "merchant": "CHEVRON",
@@ -312,6 +340,13 @@
     "date": "2026-06-03",
     "merchant": "APPLE.COM/ICLOUD",
     "amount": 2.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t086",
+    "date": "2026-06-04",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
     "category": "Subscription"
   },
   {
@@ -385,6 +420,13 @@
     "category": "Dining"
   },
   {
+    "id": "t087",
+    "date": "2026-06-18",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
+    "category": "Subscription"
+  },
+  {
     "id": "t019",
     "date": "2026-06-20",
     "merchant": "ADOBE CREATIVE CLOUD",
@@ -439,6 +481,13 @@
     "merchant": "UBER EATS",
     "amount": 31.2,
     "category": "Dining"
+  },
+  {
+    "id": "t088",
+    "date": "2026-07-02",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
+    "category": "Subscription"
   },
   {
     "id": "t028",
@@ -515,6 +564,13 @@
     "date": "2026-07-15",
     "merchant": "AMAZON PRIME",
     "amount": 14.99,
+    "category": "Subscription"
+  },
+  {
+    "id": "t089",
+    "date": "2026-07-16",
+    "merchant": "HELLOFRESH",
+    "amount": 71.94,
     "category": "Subscription"
   },
   {

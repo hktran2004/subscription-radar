@@ -1,24 +1,26 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import rawTransactions from "@/data/mock_transactions.json";
 import { detectSubscriptions } from "@/lib/detectSubscriptions";
 import { addDays, formatCurrency, formatDate } from "@/lib/format";
-import { Transaction } from "@/lib/types";
+import { getAccountTransactions } from "@/lib/transactions";
+import { getAccount } from "@/lib/accounts";
 import { CalendarCheckIcon, ChevronIcon } from "@/components/icons";
 import { CategoryIcon } from "@/components/CategoryIcon";
-import { SAPPHIRE_ACCOUNT } from "@/lib/accounts";
 
 export default async function TransactionDetailPage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ accountId: string; id: string }>;
 }) {
-  const { id } = await params;
-  const transactions = rawTransactions as Transaction[];
+  const { accountId, id } = await params;
+  const account = getAccount(accountId);
+  if (!account) notFound();
+
+  const transactions = getAccountTransactions(account.id);
   const txn = transactions.find((t) => t.id === id);
   if (!txn) notFound();
 
-  const subscriptions = detectSubscriptions(transactions);
+  const subscriptions = account.hasSubscriptionRadar ? detectSubscriptions(transactions) : [];
   const isRecurring = subscriptions.some((s) => s.merchant === txn.merchant);
 
   const details: [string, string][] = [
@@ -27,14 +29,14 @@ export default async function TransactionDetailPage({
     ["Posted date", formatDate(addDays(txn.date, 1))],
     ["Description", txn.merchant],
     ["Category", txn.category],
-    ["Card", `${SAPPHIRE_ACCOUNT.name} (••••${SAPPHIRE_ACCOUNT.last4})`],
+    ["Card", `${account.name} (••••${account.last4})`],
   ];
 
   return (
     <main className="mx-auto flex min-h-screen max-w-md flex-col gap-5 px-4 py-6">
       <header className="flex items-center gap-1">
         <Link
-          href="/account"
+          href={`/account/${account.id}`}
           aria-label="Back to account"
           className="-ml-1 flex h-8 w-8 items-center justify-center rounded-full text-slate-500 active:bg-slate-100"
         >
